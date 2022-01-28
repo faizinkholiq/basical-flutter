@@ -23,7 +23,21 @@ class MyApp extends StatelessWidget {
             IconButton(icon: Icon(Icons.mail), onPressed: () {}),
           ]
         ),
-        body: SafeArea(child: Text("Basical Flutter"),)
+        body: SafeArea(
+          child: Container(
+            color: Colors.white,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Image(
+                  image: AssetImage("assets/images/bot.jpg"),
+                ),
+                Text("We are bot")
+              ],
+            ),
+          ),
+        )
       ),
     );
   }
