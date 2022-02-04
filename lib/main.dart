@@ -27,13 +27,27 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
               margin: EdgeInsets.all(10),
               padding: EdgeInsets.all(10),
-              child: Column(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(
-                    image: AssetImage("assets/images/bot.jpg"),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: AssetImage("assets/images/bot.jpg"),
+                        height: 150,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10.0, bottom: 4.0),
+                        child: Text("We are bot", style: mainHeader),
+                      ),
+                      Text(
+                        "Hey dont worry my friend, \nill protect you", 
+                        style: subHeader,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
-                  Text("We are bot", style: mainHeader),
-                  Text("Hey dont worry my friend, ill protect you", style: subHeader),
                 ],
               ),
             ),
